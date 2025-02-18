@@ -1,7 +1,8 @@
 Project Title: Expense Data Standardization & Reimbursement Analytics in Power BI
 
 🔹 Overview:
-I recently worked on a Power BI project where I transformed and analyzed expense data to ensure data accuracy, consistency, and insightful reporting. The project involved data cleaning, transformation, and visualization to provide meaningful insights into reimbursements and expenses.
+I recently worked on a Power BI project where I transformed and analyzed expense data to ensure data accuracy, consistency, and insightful reporting.
+The project involved data cleaning, transformation, and visualization to provide meaningful insights into reimbursements and expenses.
 
 ✅ Key Tasks & Solutions
 📌 1. Data Cleaning & Transformation in Power Query
@@ -21,22 +22,16 @@ EURO to INR = 87
 📌 2. Data Modeling & DAX Measures
 🔹 Created a DAX measure to calculate the total reimbursed amount in INR:
 
-DAX
-Copy
-Edit
+DAX syntax
 Total_Reimbursed_INR = SUM('Table'[Amount in INR])
 🔹 Used CALCULATE to filter the total reimbursement for a specific project (Project_B):
 
-DAX
-Copy
-Edit
+DAX syntax
 Reimbursed_Project_B = 
 CALCULATE(SUM('Table'[Amount in INR]), 'Table'[Project Name] = "Project_B")
 🔹 Created a DAX measure to count declined requests:
 
-DAX
-Copy
-Edit
+DAX syntax
 Count_Declined_Requests = 
 COUNTROWS(FILTER('Table', 'Table'[Status] = "Declined"))
 💡 Key Learning: Using DAX functions (SUM, CALCULATE, COUNTROWS, FILTER) to derive business insights efficiently.
